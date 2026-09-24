@@ -1,0 +1,74 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,400..900;1,400..900&family=Playfair+Display:ital,wght@0,600..900;1,600..900&display=swap');
+@import "tailwindcss";
+
+:root {
+  --cream: #fbf4e9;
+  --paper: #fffaf2;
+  --line: #dfd2c2;
+  --gold: #e8b13d;
+  --red: #ec3f48;
+  --red-dark: #9f2b31;
+  --ink: #171712;
+  --background: var(--cream);
+  --foreground: var(--ink);
+}
+
+html, body {
+  height: 100%;
+  width: 100%;
+  overflow: hidden;
+  margin: 0;
+  padding: 0;
+  touch-action: none;
+}
+
+body {
+  color: var(--foreground);
+  background-color: var(--cream);
+  background-image: url('/japan-paper-bg.svg');
+  background-position: center top;
+  background-repeat: repeat-y;
+  background-size: max(100%, 1600px) auto;
+  font-family: 'Montserrat', system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+}
+
+@keyframes pulseGlow {
+  0%, 100% {
+    opacity: 0.6;
+    transform: scale(1);
+    box-shadow: 0 0 15px rgba(234, 179, 8, 0.4);
+  }
+  50% {
+    opacity: 1;
+    transform: scale(1.04);
+    box-shadow: 0 0 25px rgba(234, 179, 8, 0.8);
+  }
+}
+
+@keyframes floatGentle {
+  0%, 100% {
+    transform: translateY(0px);
+  }
+  50% {
+    transform: translateY(-8px);
+  }
+}
+
+.animate-float {
+  animation: floatGentle 4s ease-in-out infinite;
+}
+
+.animate-glow {
+  animation: pulseGlow 2.5s ease-in-out infinite;
+}
+
+/* Perspective utilities for envelope 3D flip */
+.perspective-1000 {
+  perspective: 1000px;
+}
+.transform-style-3d {
+  transform-style: preserve-3d;
+}
+.backface-hidden {
+  backface-visibility: hidden;
+}

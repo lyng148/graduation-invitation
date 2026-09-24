@@ -20,6 +20,7 @@
 # misc
 .DS_Store
 *.pem
+*.tsbuildinfo
 .cursor/scratchpad.md
 
 # debug

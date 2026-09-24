@@ -1,77 +1,54 @@
-import type { Metadata, Viewport } from 'next'
-import type { PropsWithChildren } from 'react'
-import { RealViewport } from '~/components/real-viewport'
-import AppData from '~/package.json'
-import { themes } from '~/styles/colors'
-import '~/styles/css/index.css'
-
-import { fontsVariable } from '~/styles/fonts'
-
-const APP_NAME = AppData.name
-const APP_DEFAULT_TITLE = 'Graduation Ceremony'
-const APP_TITLE_TEMPLATE = '%s - Graduation Ceremony'
-const APP_DESCRIPTION = AppData.description
-const APP_BASE_URL =
-  process.env.NEXT_PUBLIC_BASE_URL ?? 'https://localhost:3000'
+import type { Metadata } from 'next'
+import './globals.css'
 
 export const metadata: Metadata = {
-  metadataBase: new URL(APP_BASE_URL),
-  applicationName: APP_NAME,
-  title: {
-    default: APP_DEFAULT_TITLE,
-    template: APP_TITLE_TEMPLATE,
-  },
-  description: APP_DESCRIPTION,
-  alternates: {
-    canonical: '/',
-    languages: {
-      'en-US': '/en-US',
-    },
-  },
-  appleWebApp: {
-    capable: true,
-    statusBarStyle: 'default',
-    title: APP_DEFAULT_TITLE,
-  },
-  formatDetection: { telephone: false },
+  metadataBase: new URL('https://graduation.ringo.io.vn'),
+  title: 'Lễ tốt nghiệp | Thư mời',
+  description:
+    'Trân trọng kính mời bạn đến tham dự Lễ Tốt Nghiệp tại Hội trường C2 - ĐHBK Hà Nội vào Thứ Bảy, 27/09/2026 (9:00 - 11:00).',
   openGraph: {
-    type: 'website',
-    siteName: APP_NAME,
-    title: {
-      default: APP_DEFAULT_TITLE,
-      template: APP_TITLE_TEMPLATE,
-    },
-    description: APP_DESCRIPTION,
-    url: APP_BASE_URL,
+    title: 'Lễ tốt nghiệp | Thư mời',
+    description:
+      'Trân trọng kính mời bạn đến tham dự Lễ Tốt Nghiệp tại Hội trường C2 - ĐHBK Hà Nội vào Thứ Bảy, 27/09/2026 (9:00 - 11:00).',
+    url: 'https://graduation.ringo.io.vn',
+    siteName: 'Lễ tốt nghiệp',
     images: [
       {
         url: '/og.png',
         width: 1200,
         height: 630,
-        alt: APP_DEFAULT_TITLE,
+        alt: 'Thư mời Lễ Tốt Nghiệp',
       },
     ],
-    locale: 'en_US',
+    locale: 'vi_VN',
+    type: 'website',
+  },
+  twitter: {
+    card: 'summary_large_image',
+    title: 'Lễ tốt nghiệp | Thư mời',
+    description:
+      'Trân trọng kính mời bạn đến tham dự Lễ Tốt Nghiệp tại Hội trường C2 - ĐHBK Hà Nội vào Thứ Bảy, 27/09/2026.',
+    images: ['/og.png'],
   },
 }
 
-export const viewport: Viewport = {
-  themeColor: themes.light.primary,
-  colorScheme: 'normal',
-}
-
-export default async function Layout({ children }: PropsWithChildren) {
+export default function RootLayout({
+  children,
+}: Readonly<{
+  children: React.ReactNode
+}>) {
   return (
-    <html
-      lang="en"
-      dir="ltr"
-      className={fontsVariable}
-      suppressHydrationWarning
-    >
-      <body suppressHydrationWarning>
-        <RealViewport />
-        {children}
-      </body>
+    <html lang="vi">
+      <head>
+        <link
+          rel="preload"
+          as="image"
+          href="/invitation-base.webp"
+          type="image/webp"
+        />
+      </head>
+      <body className="antialiased min-h-screen">{children}</body>
     </html>
   )
 }
+
