@@ -5,11 +5,11 @@ export const metadata: Metadata = {
   metadataBase: new URL('https://graduation.ringo.io.vn'),
   title: 'Lễ tốt nghiệp | Thư mời',
   description:
-    'Trân trọng kính mời bạn đến tham dự Lễ Tốt Nghiệp tại Hội trường C2 - ĐHBK Hà Nội vào Thứ Bảy, 27/09/2026 (9:00 - 11:00).',
+    'Trân trọng kính mời bạn đến tham dự Lễ Tốt Nghiệp tại Hội trường C2 - ĐHBK Hà Nội vào Thứ Bảy, 26/09/2026 (9:00 - 11:00).',
   openGraph: {
     title: 'Lễ tốt nghiệp | Thư mời',
     description:
-      'Trân trọng kính mời bạn đến tham dự Lễ Tốt Nghiệp tại Hội trường C2 - ĐHBK Hà Nội vào Thứ Bảy, 27/09/2026 (9:00 - 11:00).',
+      'Trân trọng kính mời bạn đến tham dự Lễ Tốt Nghiệp tại Hội trường C2 - ĐHBK Hà Nội vào Thứ Bảy, 26/09/2026 (9:00 - 11:00).',
     url: 'https://graduation.ringo.io.vn',
     siteName: 'Lễ tốt nghiệp',
     images: [
@@ -27,7 +27,7 @@ export const metadata: Metadata = {
     card: 'summary_large_image',
     title: 'Lễ tốt nghiệp | Thư mời',
     description:
-      'Trân trọng kính mời bạn đến tham dự Lễ Tốt Nghiệp tại Hội trường C2 - ĐHBK Hà Nội vào Thứ Bảy, 27/09/2026.',
+      'Trân trọng kính mời bạn đến tham dự Lễ Tốt Nghiệp tại Hội trường C2 - ĐHBK Hà Nội vào Thứ Bảy, 26/09/2026.',
     images: ['/og.png'],
   },
 }

@@ -16,13 +16,13 @@ export function InvitationCard() {
   const googleMapsUrl =
     'https://www.google.com/maps/search/?api=1&query=H%E1%BB%99i+tr%C6%B0%E1%BB%9Dng+C2+%C4%90%E1%BA%A1i+h%E1%BB%8Dc+B%C3%A1ch+khoa+H%C3%A0+N%E1%BB%99i'
 
-  // Google Calendar event creation URL for Saturday 27/09/2026 09:00 - 11:00 (UTC+7)
+  // Google Calendar event creation URL for Saturday 26/09/2026 09:00 - 11:00 (UTC+7)
   const googleCalendarUrl =
-    'https://calendar.google.com/calendar/render?action=TEMPLATE&text=L%E1%BB%85+T%E1%BB%91t+Nghi%E1%BB%87p+-+%C4%90%E1%BA%A1i+h%E1%BB%8Dc+B%C3%A1ch+Khoa+H%C3%A0+N%E1%BB%99i&dates=20260927T020000Z%2F20260927T040000Z&details=Tr%C3%A2n+tr%E1%BB%8Dng+k%C3%ADnh+m%E1%BB%9Di+b%E1%BA%A1n+%C4%91%E1%BA%BFn+tham+d%E1%BB%B1+v%C3%A0+ch%E1%BB%A5p+%E1%BA%A3nh+k%E1%BB%B7+ni%E1%BB%87m+t%E1%BA%A1i+L%E1%BB%85+T%E1%BB%91t+Nghi%E1%BB%87p%21&location=H%E1%BB%99i+tr%C6%B0%E1%BB%9Dng+C2%2C+%C4%90%E1%BA%A1i+h%E1%BB%8Dc+B%C3%A1ch+Khoa+H%C3%A0+N%E1%BB%99i%2C+1+%C4%90%E1%BA%A1i+C%E1%BB%93+Vi%E1%BB%87t%2C+H%C3%A0+N%E1%BB%99i'
+    'https://calendar.google.com/calendar/render?action=TEMPLATE&text=L%E1%BB%85+T%E1%BB%91t+Nghi%E1%BB%87p+-+%C4%90%E1%BA%A1i+h%E1%BB%8Dc+B%C3%A1ch+Khoa+H%C3%A0+N%E1%BB%99i&dates=20260926T020000Z%2F20260926T040000Z&details=Tr%C3%A2n+tr%E1%BB%8Dng+k%C3%ADnh+m%E1%BB%9Di+b%E1%BA%A1n+%C4%91%E1%BA%BFn+tham+d%E1%BB%B1+v%C3%A0+ch%E1%BB%A5p+%E1%BA%A3nh+k%E1%BB%B7+ni%E1%BB%87m+t%E1%BA%A1i+L%E1%BB%85+T%E1%BB%91t+Nghi%E1%BB%87p%21&location=H%E1%BB%99i+tr%C6%B0%E1%BB%9Dng+C2%2C+%C4%90%E1%BA%A1i+h%E1%BB%8Dc+B%C3%A1ch+Khoa+H%C3%A0+N%E1%BB%99i%2C+1+%C4%90%E1%BA%A1i+C%E1%BB%93+Vi%E1%BB%87t%2C+H%C3%A0+N%E1%BB%99i'
 
   const handleTimeClick = (e: React.MouseEvent) => {
     e.stopPropagation()
-    navigator.clipboard?.writeText('9:00 - 11:00, Thứ Bảy ngày 27/09/2026 tại Hội trường C2 - ĐHBK Hà Nội')
+    navigator.clipboard?.writeText('9:00 - 11:00, Thứ Bảy ngày 26/09/2026 tại Hội trường C2 - ĐHBK Hà Nội')
     setCopiedTime(true)
     showToast('📋 Đã sao chép thời gian & địa điểm!')
     setTimeout(() => setCopiedTime(false), 2500)
@@ -130,7 +130,7 @@ export function InvitationCard() {
               </span>
             </button>
 
-            {/* RIGHT PILL: DATE (Thứ bảy 27/09/2026) */}
+            {/* RIGHT PILL: DATE (Thứ bảy 26/09/2026) */}
             <button
               type="button"
               onClick={handleDateClick}
@@ -140,7 +140,7 @@ export function InvitationCard() {
             >
               <Calendar className="w-3 h-3 sm:w-4 sm:h-4 text-white shrink-0" />
               <span className="text-[10px] sm:text-sm md:text-base font-bold tracking-tight whitespace-nowrap">
-                Thứ bảy 27/09/2026
+                Thứ bảy 26/09/2026
               </span>
 
               {/* Hover Tooltip */}

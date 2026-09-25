@@ -105,7 +105,7 @@ export function Envelope({ onOpen }: EnvelopeProps) {
               {/* Bottom Half of Folded Letter */}
               <div className="text-center pb-2">
                 <div className="inline-block px-3 py-1 rounded-full bg-[#fbf4e9] border border-[#dfd2c2] text-[10px] sm:text-xs font-semibold text-[#625a50]">
-                  27 . 09 . 2026 • ĐHBK Hà Nội
+                  26 . 09 . 2026 • ĐHBK Hà Nội
                 </div>
               </div>
             </div>
